@@ -4,106 +4,109 @@
     "sourceApiVersion": "55.0",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "plugins": {
-        "sfdx-plugin-prettier": {
-            "enabled": true
-        }
+      "sfdx-plugin-prettier": {
+        "enabled": true
+      }
     },
     "pushPackageDirectoriesSequentially": true,
     "packageDirectories": [
-        {
-            "package": "Eaton Nebula Logger - Core",
-            "path": ".\\nebula-logger\\core",
-            "definitionFile": "./config/scratch-orgs/base-scratch-def.json",
-            "versionNumber": "0.1.0.NEXT",
-            "versionName": "Initial Eaton version",
-            "versionDescription": "Sourced from V4.8.4 -- Added new LoggerParameter__mdt records to control synchronous queries & stack trace parsing, incorporated Platform Cache into LoggerCache class",
-            "releaseNotesUrl": "",
-            "default": false
-        },
-        {
-            "default": false,
-            "package": "Eaton Nebula Logger - Plugin - Async Failure Additions",
-            "path": ".\\nebula-logger\\plugins\\async-failure-additions\\plugin",
-            "dependencies": [
-                {
-                    "package": "Eaton Nebula Logger - Core@0.1.0-1"
-                }
-            ],
-            "versionName": "Added logging for Screen Flow failures",
-            "versionNumber": "0.1.0.NEXT",
-            "versionDescription": "Allows unhandled exceptions within screen flows to be automatically logged (toggleable, default off)"
-        },
-        {
-            "package": "Nebula Logger - Plugin - Big Object Archiving",
-            "path": ".\\nebula-logger\\plugins\\big-object-archiving\\plugin",
-            "dependencies": [
-                {
-                    "package": "Nebula Logger - Core@4.7.1-plugin-framework-overhaul"
-                }
-            ],
-            "versionName": "Beta Release",
-            "versionNumber": "0.9.0.NEXT",
-            "versionDescription": "Initial beta version of new plugin",
-            "default": false
-        },
-        {
-            "package": "Nebula Logger - Plugin - Log Retention Rules",
-            "path": ".\\nebula-logger\\plugins\\log-retention-rules\\plugin",
-            "dependencies": [
-                {
-                    "package": "Nebula Logger - Core@4.7.1-plugin-framework-overhaul"
-                }
-            ],
-            "versionName": "Beta Release",
-            "versionNumber": "0.9.0.NEXT",
-            "versionDescription": "Initial beta version of new plugin",
-            "default": false
-        },
-        {
-            "package": "Eaton Nebula Logger - Plugin - Logger Admin Dashboard",
-            "path": ".\\nebula-logger\\plugins\\logger-admin-dashboard\\plugin",
-            "dependencies": [
-                {
-                    "package": "Eaton Nebula Logger - Core@0.1.0-1"
-                }
-            ],
-            "versionName": "Beta Release",
-            "versionNumber": "0.1.0.NEXT",
-            "versionDescription": "Initial beta version of new dashboard plugin",
-            "default": false
-        },
-        {
-            "package": "Nebula Logger - Plugin - Slack",
-            "path": ".\\nebula-logger\\plugins\\slack\\plugin",
-            "dependencies": [
-                {
-                    "package": "Nebula Logger - Core@4.7.1-plugin-framework-overhaul"
-                }
-            ],
-            "versionName": "Improved formatting for log entry message",
-            "versionNumber": "1.5.1.NEXT",
-            "versionDescription": "Updated formatting of the log entry message to handle line breaks",
-            "default": false
-        },
-        {
-            "path": ".\\nebula-logger\\extra-tests",
-            "default": false
-        },
-        {
-            "path": ".\\nebula-logger\\recipes",
-            "default": false
-        },
-        {
-            "path": ".\\nebula-logger\\unsorted",
-            "default": true
-        }
+      {
+        "package": "Eaton Nebula Logger - Core",
+        "path": ".\\nebula-logger\\core",
+        "definitionFile": "./config/scratch-orgs/base-scratch-def.json",
+        "versionNumber": "1.0.0.NEXT",
+        "versionName": "Initial Eaton version",
+        "versionDescription": "Sourced from V4.8.4 -- Added new LoggerParameter__mdt records to control synchronous queries & stack trace parsing, incorporated Platform Cache into LoggerCache class",
+        "releaseNotesUrl": "",
+        "default": false
+      },
+      {
+        "default": false,
+        "package": "Eaton Nebula Logger - Plugin - Async Failure Additions",
+        "path": ".\\nebula-logger\\plugins\\async-failure-additions\\plugin",
+        "dependencies": [
+          {
+            "subscriberPackageVersionId": "04t5Y000001sdjgQAA"
+          }
+        ],
+        "versionName": "Added logging for Screen Flow failures",
+        "versionNumber": "1.0.0.NEXT",
+        "versionDescription": "Allows unhandled exceptions within screen flows to be automatically logged (toggleable, default off)"
+      },
+      {
+        "package": "Nebula Logger - Plugin - Big Object Archiving",
+        "path": ".\\nebula-logger\\plugins\\big-object-archiving\\plugin",
+        "dependencies": [
+          {
+            "package": "Nebula Logger - Core@4.7.1-plugin-framework-overhaul"
+          }
+        ],
+        "versionName": "Beta Release",
+        "versionNumber": "0.9.0.NEXT",
+        "versionDescription": "Initial beta version of new plugin",
+        "default": false
+      },
+      {
+        "package": "Nebula Logger - Plugin - Log Retention Rules",
+        "path": ".\\nebula-logger\\plugins\\log-retention-rules\\plugin",
+        "dependencies": [
+          {
+            "package": "Nebula Logger - Core@4.7.1-plugin-framework-overhaul"
+          }
+        ],
+        "versionName": "Beta Release",
+        "versionNumber": "0.9.0.NEXT",
+        "versionDescription": "Initial beta version of new plugin",
+        "default": false
+      },
+      {
+        "package": "Eaton Nebula Logger - Plugin - Logger Admin Dashboard",
+        "path": ".\\nebula-logger\\plugins\\logger-admin-dashboard\\plugin",
+        "dependencies": [
+          {
+            "subscriberPackageVersionId": "04t5Y000001sdjgQAA"
+          }
+        ],
+        "versionName": "Beta Release",
+        "versionNumber": "1.0.0.NEXT",
+        "versionDescription": "Initial beta version of new dashboard plugin",
+        "default": false
+      },
+      {
+        "package": "Nebula Logger - Plugin - Slack",
+        "path": ".\\nebula-logger\\plugins\\slack\\plugin",
+        "dependencies": [
+          {
+            "package": "Nebula Logger - Core@4.7.1-plugin-framework-overhaul"
+          }
+        ],
+        "versionName": "Improved formatting for log entry message",
+        "versionNumber": "1.5.1.NEXT",
+        "versionDescription": "Updated formatting of the log entry message to handle line breaks",
+        "default": false
+      },
+      {
+        "path": ".\\nebula-logger\\extra-tests",
+        "default": false
+      },
+      {
+        "path": ".\\nebula-logger\\recipes",
+        "default": false
+      },
+      {
+        "path": ".\\nebula-logger\\unsorted",
+        "default": true
+      }
     ],
     "packageAliases": {
-        "Eaton Nebula Logger - Core": "0Ho5Y000000TNN9SAO",
-        "Eaton Nebula Logger - Core@0.1.0-1": "04t5Y0000027J2mQAE",
-        "Eaton Nebula Logger - Plugin - Logger Admin Dashboard": "0Ho5Y000000TNNESA4",
-        "Eaton Nebula Logger - Plugin - Logger Admin Dashboard@0.1.0-1": "04t5Y0000027J2rQAE",
-        "Eaton Nebula Logger - Plugin - Async Failure Additions": "0Ho5Y000000TNNJSA4",
-        "Eaton Nebula Logger - Plugin - Async Failure Additions@0.1.0-1": "04t5Y0000027J31QAE"
+      "Eaton Nebula Logger - Core": "0Ho5Y000000TNN9SAO",
+      "Eaton Nebula Logger - Core@0.1.0-1": "04t5Y0000027J2mQAE",
+      "Eaton Nebula Logger - Plugin - Logger Admin Dashboard": "0Ho5Y000000TNNESA4",
+      "Eaton Nebula Logger - Plugin - Logger Admin Dashboard@0.1.0-1": "04t5Y0000027J2rQAE",
+      "Eaton Nebula Logger - Plugin - Async Failure Additions": "0Ho5Y000000TNNJSA4",
+      "Eaton Nebula Logger - Plugin - Async Failure Additions@0.1.0-1": "04t5Y0000027J31QAE",
+      "Eaton Nebula Logger - Core@1.0.0-1": "04t5Y000001sdjgQAA",
+      "Eaton Nebula Logger - Plugin - Logger Admin Dashboard@1.0.0-1": "04t5Y000001sdjlQAA",
+      "Eaton Nebula Logger - Plugin - Async Failure Additions@1.0.0-1": "04t5Y000001sdjqQAA"
     }
-}
+  }  
